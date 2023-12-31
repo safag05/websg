@@ -288,3 +288,32 @@ function getRandomInt(min, max) {
   
   // start the game
   rAF = requestAnimationFrame(loop);
+
+// Listen to touch events for mobile controls
+document.addEventListener('touchstart', handleTouchStart, false);
+document.addEventListener('touchmove', handleTouchMove, false);
+
+let touchStartX = 0;
+
+function handleTouchStart(event) {
+  touchStartX = event.touches[0].clientX;
+}
+
+function handleTouchMove(event) {
+  const touchEndX = event.touches[0].clientX;
+  const touchDiff = touchEndX - touchStartX;
+
+  // Adjust these values based on your game's needs
+  if (touchDiff > 50) {
+    // Move right
+    moveTetromino('right');
+  } else if (touchDiff < -50) {
+    // Move left
+    moveTetromino('left');
+  } else {
+    // Move down
+    moveTetromino('down');
+  }
+
+  touchStartX = touchEndX;
+}
