@@ -304,10 +304,10 @@ function handleTouchMove(event) {
   const touchDiff = touchEndX - touchStartX;
 
   // Adjust these values based on your game's needs
-  if (touchDiff > 50) {
+  if (touchDiff > 150) {
     // Move right
     moveTetromino('right');
-  } else if (touchDiff < -50) {
+  } else if (touchDiff < -150) {
     // Move left
     moveTetromino('left');
   } else {
