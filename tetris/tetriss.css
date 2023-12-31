@@ -1,6 +1,6 @@
 html, body {
     height: 100%;
-    margin: 0;
+    margin: 10;
   }
 
   body {
@@ -17,5 +17,6 @@ html, body {
   @media (max-width: 1000px) {
     body {
         align-items: normal;
+        height: 90%;
     }
   }
