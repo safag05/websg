@@ -55,7 +55,7 @@ video {
 
 @media (max-width: 768px) {
   header {
-      font-size: 1em; /* Adjust header font size for smaller screens */
+      font-size: .8em; /* Adjust header font size for smaller screens */
       width: 100%;
   }
 
